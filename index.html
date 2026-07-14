@@ -59,14 +59,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(10px, 3vw, 16px);
-    padding: clamp(14px, 3vh, 24px) 20px clamp(6px, 1.5vh, 10px);
+    padding: clamp(16px, 3.5vh, 28px) 20px clamp(8px, 1.5vh, 10px);
     flex-shrink: 0;
-  }
-
-  .top-row img {
-    height: clamp(32px, 6vw, 44px);
-    width: auto;
   }
 
   main {
@@ -85,8 +79,8 @@
   }
 
   .check-badge {
-    width: clamp(32px, 6vw, 44px);
-    height: clamp(32px, 6vw, 44px);
+    width: clamp(48px, 10vw, 68px);
+    height: clamp(48px, 10vw, 68px);
     border-radius: 50%;
     background: var(--handify-green);
     display: flex;
@@ -132,7 +126,7 @@
 
   .video-wrapper {
     width: 100%;
-    max-width: min(320px, 78vw, 34vh);
+    max-width: min(300px, 74vw, 30vh);
     margin: 0 auto;
     border-radius: 14px;
     overflow: hidden;
@@ -149,11 +143,20 @@
   footer {
     text-align: center;
     padding: clamp(10px, 2vh, 20px) 24px;
+    flex-shrink: 0;
+  }
+
+  footer img {
+    height: clamp(44px, 11vw, 72px);
+    width: auto;
+    margin-bottom: clamp(6px, 1.2vh, 10px);
+  }
+
+  footer p {
     font-size: 10px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: #a3a3a0;
-    flex-shrink: 0;
   }
 </style>
 </head>
@@ -162,7 +165,6 @@
   <div class="brand-stripe"><span></span><span></span><span></span></div>
 
   <div class="top-row">
-    <img src="assets/logo-horizontal-tm-azul.png" alt="Handify™">
     <div class="check-badge">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M4 12.5L9.5 18L20 6" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -199,7 +201,10 @@
     document.head.appendChild(s);
   </script>
 
-  <footer>Handify™ — Plataforma de cursos de artesanato</footer>
+  <footer>
+    <img src="assets/logo-horizontal-tm-azul.png" alt="Handify™">
+    <p>Plataforma de cursos de artesanato</p>
+  </footer>
 
 </body>
 </html>
