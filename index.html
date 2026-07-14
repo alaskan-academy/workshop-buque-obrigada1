@@ -239,12 +239,18 @@
   </script>
 
   <script type="text/javascript">
-    setTimeout(function () {
+    function showBuyButton() {
       var caption = document.getElementById('video-caption');
       var buyContainer = document.getElementById('buy-container');
       if (caption) caption.style.display = 'none';
       if (buyContainer) buyContainer.classList.add('visible');
-    }, 332000);
+    }
+
+    if (new URLSearchParams(window.location.search).has('test_cta')) {
+      showBuyButton();
+    } else {
+      setTimeout(showBuyButton, 332000);
+    }
   </script>
 
   <footer>
