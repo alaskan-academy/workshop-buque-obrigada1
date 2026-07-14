@@ -4,6 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Handify™ — Confirmação de compra</title>
+
+<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+<link rel="preload" href="https://scripts.converteai.net/44a04a32-df90-4e75-8c2e-cb5f0854afa1/players/6a55a0adfb03c112714b5379/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/44a04a32-df90-4e75-8c2e-cb5f0854afa1/6a55a09788cf0eea5a817167/main.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://license.vturb.com">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -116,60 +126,12 @@
   }
 
   .video-wrapper {
-    position: relative;
     width: 100%;
-    max-width: 640px;
+    max-width: 400px;
     margin: 0 auto;
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 8px 28px rgba(15, 15, 15, 0.18);
-    cursor: pointer;
-  }
-
-  /*
-    PLACEHOLDER DE VSL — substitua o conteúdo de .video-frame
-    pelo embed real do Panda Video ou Vturb, por exemplo:
-
-    Panda Video:
-    <div id="panda-VIDEO_ID"><script src="https://player.pandavideo.com.br/api.v2.js"></script></div>
-
-    Vturb:
-    <vturb-smartplayer id="vid-XXXX" style="display:block;margin:0 auto;width:100%;"></vturb-smartplayer>
-    <script type="text/javascript" src="https://scripts.converteai.net/.../player.js" async></script>
-  */
-  .video-frame {
-    aspect-ratio: 16 / 9;
-    width: 100%;
-    background: #3a3a3a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    font-weight: 600;
-  }
-
-  .play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 76px;
-    height: 76px;
-    border-radius: 50%;
-    background: var(--handify-blue);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
-  }
-
-  .play-button svg {
-    width: 26px;
-    height: 26px;
-    margin-left: 4px;
   }
 
   .video-caption {
@@ -223,19 +185,21 @@
         Antes disso, reserve 3 minutos para assistir ao vídeo abaixo. Uma de nossas alunas preparou uma mensagem especial para você.
       </p>
 
-      <div class="video-wrapper" onclick="/* trocar pelo embed real do Panda Video / Vturb */">
-        <div class="video-frame">VSL AQUI</div>
-        <div class="play-button">
-          <svg viewBox="0 0 24 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 4L20 12L6 20V4Z"/>
-          </svg>
-        </div>
+      <div class="video-wrapper">
+        <vturb-smartplayer id="vid-6a55a0adfb03c112714b5379" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
       </div>
 
       <p class="video-caption">▶ Clique no vídeo para continuar.</p>
 
     </div>
   </main>
+
+  <script type="text/javascript">
+    var s = document.createElement("script");
+    s.src = "https://scripts.converteai.net/44a04a32-df90-4e75-8c2e-cb5f0854afa1/players/6a55a0adfb03c112714b5379/v4/player.js";
+    s.async = true;
+    document.head.appendChild(s);
+  </script>
 
   <footer>Handify™ — Plataforma de cursos de artesanato</footer>
 
