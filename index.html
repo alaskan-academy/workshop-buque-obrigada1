@@ -139,6 +139,15 @@
     color: var(--handify-blue);
   }
 
+  .buy-container {
+    margin-top: clamp(10px, 1.6vh, 18px);
+    display: none;
+  }
+
+  .buy-container.visible {
+    display: block;
+  }
+
   footer {
     text-align: center;
     padding: clamp(16px, 3vh, 28px) 24px clamp(20px, 4vh, 36px);
@@ -188,7 +197,12 @@
         <vturb-smartplayer id="vid-6a55a0adfb03c112714b5379" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 133.33333333333331% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>
       </div>
 
-      <p class="video-caption">▶ Clique no vídeo para continuar.</p>
+      <p class="video-caption" id="video-caption">▶ Clique no vídeo para continuar.</p>
+
+      <div class="buy-container" id="buy-container">
+        <a href="#" payt_action="oneclick_buy" data-object="RBMWO4-LPGKQ8" style="display: inline-block; background: #22c55e; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; font-size: 18px; font-weight: 700; padding: 16px 24px; border-radius: 8px; text-decoration: none; text-align: center; cursor: pointer">Sim! Quero Acesso a Todos os Cursos</a>
+        <select payt_element="installment" data-object="RBMWO4-LPGKQ8" style="display:block; margin:10px auto 0; max-width:240px; padding:10px; border:1px solid #cbd5e1; border-radius:6px; background:#fff; font-size:14px;"></select>
+      </div>
 
     </div>
   </main>
@@ -198,6 +212,17 @@
     s.src = "https://scripts.converteai.net/44a04a32-df90-4e75-8c2e-cb5f0854afa1/players/6a55a0adfb03c112714b5379/v4/player.js";
     s.async = true;
     document.head.appendChild(s);
+  </script>
+
+  <script type="text/javascript" src="https://checkout.payt.com.br/multiple-oneclickbuyscript/RV65ZO.js"></script>
+
+  <script type="text/javascript">
+    setTimeout(function () {
+      var caption = document.getElementById('video-caption');
+      var buyContainer = document.getElementById('buy-container');
+      if (caption) caption.style.display = 'none';
+      if (buyContainer) buyContainer.classList.add('visible');
+    }, 332000);
   </script>
 
   <footer>
