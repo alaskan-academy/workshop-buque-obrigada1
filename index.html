@@ -217,6 +217,28 @@
   <script type="text/javascript" src="https://checkout.payt.com.br/multiple-oneclickbuyscript/RV65ZO.js"></script>
 
   <script type="text/javascript">
+    (function () {
+      var select = document.querySelector('select[payt_element="installment"]');
+      if (!select) return;
+
+      function selectTwelve() {
+        var option = select.querySelector('option[value="12"]');
+        if (!option) return false;
+        select.value = "12";
+        select.dispatchEvent(new Event('change', { bubbles: true }));
+        return true;
+      }
+
+      if (selectTwelve()) return;
+
+      var observer = new MutationObserver(function () {
+        if (selectTwelve()) observer.disconnect();
+      });
+      observer.observe(select, { childList: true });
+    })();
+  </script>
+
+  <script type="text/javascript">
     setTimeout(function () {
       var caption = document.getElementById('video-caption');
       var buyContainer = document.getElementById('buy-container');
